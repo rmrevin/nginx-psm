@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [[ -n $1 ]]; then
+    TAG=$1
+else
+    TAG='latest'
+fi
+
+docker build --tag rmrevin/nginx-psm:$TAG .
+
+echo "Tag: $TAG"

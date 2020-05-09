@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [[ -n $1 ]]; then
+    TAG=$1
+else
+    TAG='latest'
+fi
+
+echo "Begin pushing tag: $TAG"
+
+docker push rmrevin/nginx-psm:$TAG
